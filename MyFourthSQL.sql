@@ -35,8 +35,7 @@ FROM hacker_news
 LIMIT 10;
 
 SELECT timestamp,
-   strftime('%H', timestamp) --this function allows us to return a formatted date
-   --it takes two arguments (format, column)
+   strftime('%H', timestamp) --this function allows us to return a formatted date. it takes two arguments (format, column)
 FROM hacker_news
 GROUP BY 1
 LIMIT 20;
