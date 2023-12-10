@@ -134,3 +134,10 @@ status_aggregate AS (
 )
 SELECT *
 FROM status_aggregate;
+-- add your churn calculation here
+
+SELECT 
+  month, 
+  1.0 * canceled/active AS churn_rate
+FROM status_aggregate
+;
